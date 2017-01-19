@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+/*
+YUI 3.18.1 (build f7e7bcb)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+
+html{color:#000;background:#fff}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,figure{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+
+// Original reset
+//------------------------
+main,sub{
+  display: block;
+}
+
+// Android一部機種で文章が途中で折り返される問題を修正
+p, li, dt, dd{
+  background: url(data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP///////wAAACH5BAEHAAIALAAAAAABAAEAAAICVAEAOw==);
+}
+
+img{
+  vertical-align: top;
+}
+@media screen and (max-width: 768px) {
+  img{
+    max-width: 100%;
+  }
+}
+
+// BreakPoint
+@mixin bp1050 {
+  @media screen and (max-width : 1080px) {
+    @content;
+  }
+}
+
+@mixin bp768 {
+  @media screen and (max-width : 768px) {
+    @content;
+  }
+}
+
+
+@mixin bp413 {
+  @media screen and (max-width : 413px) {
+    @content;
+  }
+}
+
+@mixin bp349 {
+  @media screen and (max-width : 349px) {
+    @content;
+  }
+}
+
+#wrapper{
+  position: relative;
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+#header{
+  margin-top: 20px;
+  h1{
+      font-size: 30px;
+      margin-bottom: 20px;
+  }
+}
+
+.main{
+  .chara{
+    overflow: hidden;
+    font-family: 'Trirong', serif;
+    .chara-box{
+      float: left;
+      position: relative;
+      .chara-wrap{
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        display: block;
+        width:100%;
+        height:100%;
+        text-align: center;
+        transition:all 0.7s;
+        .chara-data{
+          display: block;
+          font-size: 0;
+        }
+        &:hover{
+          background: rgba(0,0,0,0.7);
+          .chara-data{
+            color:#fff;
+            text-shadow:1px 1px 1px #666;
+            position: absolute;
+            top: 0px;
+            left: 40%;
+            font-size: 15px;
+            font-weight: bold;
+            display: block;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            height:100%;
+          }
+        }
+        img{
+          position: relative;
+          left: 0px;
+          top: 10px;
+
+        }
+      }
+    }
+  }
+}
+
+#footer{
+  margin-top: 10px;
+  text-align: center;
+  color: #666;
+  font-size: 10px;
+}
