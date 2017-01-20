@@ -2,12 +2,13 @@
 <html lang="ja">
 <head>
 
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="/style.css">
   <link href="https://fonts.googleapis.com/css?family=Trirong" rel="stylesheet">
 <meta name="viewport" content="width=device-width">
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-  <!-- <script src="jquery-1.11.3.min.js"></script> -->
-  <script src="main.js"></script>
+  <script src="/js/jquery-1.11.3.min.js"></script>
+  <script src="/js/jquery.pjax.js"></script>
+  <script src="/js/main.js"></script>
   <title>Suhama's Barracks</title>
 </head>
 
@@ -15,7 +16,9 @@
 <div id="wrapper">
   <header>
     <div id="header">
-      <h1><img src="http://placekitten.com/300/150" alt=""></h1>
+      <h1><a href="/" class="pjax">Suhama's Barracks</a></h1>
+      <p><span>Tree Of Savor JP/ Saule Server</span><br>
+      Alchemist,Miko,Sapper,Fencer...</p>
     </div>
     <!-- /#header -->
   </header>
@@ -23,49 +26,51 @@
   <div class="main">
     <div class="chara">
       <div class="chara-box azu">
-        <img src="http://placekitten.com/g/200/450" alt="Azuki">
-        <p class="chara-wrap">
-          <img src="http://placekitten.com/g/50/50" alt="Miko">
-          <span class="chara-data">Azuki</span>
-        </p>
+        <a href="chara/azuki.html" class="pjax">
+          <img class="chara-photo" src="http://placekitten.com/g/200/450" alt="Azuki">
+          <p class="chara-wrap">
+            <img src="img/ico_mk.png" alt="Miko">
+            <span class="chara-data">Azuki</span>
+          </p>
+        </a>
       </div>
 
       <div class="chara-box kina">
-        <img src="http://placekitten.com/g/200/450" alt="Kinako">
+        <img class="chara-photo" src="http://placekitten.com/g/200/450" alt="Kinako">
         <p class="chara-wrap">
-          <img src="http://placekitten.com/g/50/50" alt="Alchemist">
+          <img src="img/ico_al.png" alt="Alchemist">
           <span class="chara-data">Kinako</span>
         </p>
       </div>
 
       <div class="chara-box aka">
-        <img src="http://placekitten.com/g/200/450" alt="Akahuku">
+        <img class="chara-photo" src="http://placekitten.com/g/200/450" alt="Akahuku">
         <p class="chara-wrap">
-          <img src="http://placekitten.com/g/50/50" alt="Sapper">
+          <img src="img/ico_sp.png" alt="Sapper">
           <span class="chara-data">Akahuku</span>
         </p>
       </div>
 
       <div class="chara-box kaki">
-        <img src="http://placekitten.com/g/200/450" alt="Kakitsubata">
+        <img class="chara-photo" src="http://placekitten.com/g/200/450" alt="Kakitsubata">
         <p class="chara-wrap">
-          <img src="http://placekitten.com/g/50/50" alt="Fencer">
+          <img src="img/ico_fen.png" alt="Fencer">
           <span class="chara-data">Kakitsubata</span>
         </p>
       </div>
 
       <div class="chara-box kon">
-        <img src="http://placekitten.com/g/150/450" alt="Konpeito">
+        <img class="chara-photo" src="http://placekitten.com/g/150/450" alt="Konpeito">
         <p class="chara-wrap">
-          <img src="http://placekitten.com/g/50/50" alt="Cryo">
+          <img src="img/ico_cr.png" alt="Cryo">
           <span class="chara-data">Konpeito</span>
         </p>
       </div>
 
       <div class="chara-box saku">
-        <img src="http://placekitten.com/g/150/450" alt="Sakuramochi">
+        <img class="chara-photo" src="http://placekitten.com/g/150/450" alt="Sakuramochi">
         <p class="chara-wrap">
-          <img src="http://placekitten.com/g/50/50" alt="Sword">
+          <img src="img/ico_sd.png" alt="Sword">
           <span class="chara-data">Sakuramochi</span>
         </p>
       </div>
@@ -78,7 +83,7 @@
 
   <footer>
     <div id="footer">
-      <p>&copy; hogehoge</p>
+      <p></p>
     </div>
     <!-- /#footer -->
   </footer>

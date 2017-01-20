@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Pjax</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="">
+  <meta property="og:title" content="">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2" />
+  <link href='https://fonts.googleapis.com/css?family=Carter+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/style.css">
+  <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.pjax.js"></script>
+  <script>
+$(function(){
+// $('body').pjax('a.pjax', '#content', { timeout: 0 });
+// });
+  $(document).bind('pjax:fetch', function(){
+      $('body').css('overflow', 'hidden');
+      $('#content').attr({
+            'class': 'fadeInUp'
+        });
+  });
+  $(document).bind('pjax:render', function(){
+      $('#content').attr({
+            'class': 'fadeInUp'
+        });
+      $('body').css('overflow', '');
+  });  
+});
+  </script>
+  <!--[if lt IE 9]>
+    <script src="/shared/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<div id="content" class="page2">
+ <p>2ページ目</p>
+<a class="pjax" href="/">もどる</a>
+</div>
+ 
+</body>
+</html>
